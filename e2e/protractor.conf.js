@@ -11,12 +11,12 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome',
     'chromeOptions': {
-      args: ['lang=pt-BR'],
+      args: [ 'lang=pt-BR' ],
       prefs: {
         'download': {
           'prompt_for_download': false
         },
-        'intl': { accept_languages: "pt-BR" }
+        'intl': { accept_languages: 'pt-BR' }
       }
     }
   },
@@ -27,7 +27,6 @@ exports.config = {
       project: require('path').join(__dirname, './tsconfig.e2e.json')
     });
 
-    //organiza os resultados no Prompt de Comando
     jasmine.getEnv().addReporter(new SpecReporter(
       {
         displayFailuresSummary: true,
